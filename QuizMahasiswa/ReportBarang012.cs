@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 
 namespace QuizMahasiswa
 {
@@ -20,21 +22,27 @@ namespace QuizMahasiswa
 
         private void btnExportPDF_Click(object sender, EventArgs e)
         {
+            exportgridtopdf(dataGridView1, "Report Barang");
+        }
+
+        public void exportgridtopdf(DataGridView dgw, string filename)
+        {
             BaseFont bf = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1250, BaseFont.EMBEDDED);
-            PdfPTable pdftable = new PdfPTable(dgw.Columns.Count);
+            PdfPTable pdftable = new PdfPTable(dgw.ColumnCount);
             pdftable.DefaultCell.Padding = 3;
             pdftable.WidthPercentage = 100;
             pdftable.HorizontalAlignment = Element.ALIGN_LEFT;
             pdftable.DefaultCell.BorderWidth = 1;
 
             iTextSharp.text.Font text = new iTextSharp.text.Font(bf, 10, iTextSharp.text.Font.NORMAL);
-            //Add header
+            //Add Header
             foreach (DataGridViewColumn column in dgw.Columns)
             {
                 PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText, text));
                 cell.BackgroundColor = new iTextSharp.text.BaseColor(240, 240, 240);
                 pdftable.AddCell(cell);
             }
+
             //Add datarow
             foreach (DataGridViewRow row in dgw.Rows)
             {
@@ -59,6 +67,55 @@ namespace QuizMahasiswa
                     stream.Close();
                 }
             }
+        }
+
+        public void exportgridtoexcel(DataGridView dgw, string filename)
+        {
+            Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
+            Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
+            Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
+            worksheet = workbook.Sheets["Sheet1"];
+            worksheet = workbook.ActiveSheet;
+            worksheet.Name = "ProductDetail";
+
+            for (int i = 1; i < dataGridView1.Columns.Count + 1; i++)
+            {
+                worksheet.Cells[1, i] = dataGridView1.Columns[i - 1].HeaderText;
+            }
+
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                for (int j = 0; j < dataGridView1.Columns.Count; j++)
+                {
+                    worksheet.Cells[i + 2, j + 1] = dataGridView1.Rows[i].Cells[j].Value.ToString();
+                }
+            }
+
+            var saveFileDialogeExcel = new SaveFileDialog();
+            saveFileDialogeExcel.FileName = "Report Barang";
+            saveFileDialogeExcel.DefaultExt = ".xlsx";
+
+            if (saveFileDialogeExcel.ShowDialog() == DialogResult.OK)
+            {
+                workbook.SaveAs(saveFileDialogeExcel.FileName, Type.Missing, Type.Missing,
+                    Type.Missing, Type.Missing, Type.Missing,
+                    Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing,
+                    Type.Missing, Type.Missing, Type.Missing);
+            }
+
+            app.Quit();
+        }
+
+        private void btnExportExcel_Click(object sender, EventArgs e)
+        {
+            exportgridtoexcel(dataGridView1, "Report Barang");
+        }
+
+        private void ReportBarang012_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'quizmahasiswaDataSet.tbl_barang' table. You can move, or remove it, as needed.
+            this.tbl_barangTableAdapter.Fill(this.quizmahasiswaDataSet.tbl_barang);
+
         }
     }
 }

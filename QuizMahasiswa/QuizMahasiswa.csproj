@@ -62,6 +62,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="quizmahasiswaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>quizmahasiswaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ReportBarang012.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +97,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="quizmahasiswaDataSet.xsc">
+      <DependentUpon>quizmahasiswaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="quizmahasiswaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>quizmahasiswaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="quizmahasiswaDataSet.xss">
+      <DependentUpon>quizmahasiswaDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
