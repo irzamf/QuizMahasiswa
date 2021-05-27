@@ -47,16 +47,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(127, 9);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(147, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 13);
+            this.label1.Size = new System.Drawing.Size(204, 31);
             this.label1.TabIndex = 0;
-            this.label1.Text = "FORM MASTER BARANG";
+            this.label1.Text = "Master Barang";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 44);
+            this.label2.Location = new System.Drawing.Point(30, 80);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(18, 13);
             this.label2.TabIndex = 1;
@@ -65,7 +66,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(30, 86);
+            this.label3.Location = new System.Drawing.Point(30, 122);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 13);
             this.label3.TabIndex = 2;
@@ -74,7 +75,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(30, 127);
+            this.label4.Location = new System.Drawing.Point(30, 163);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(36, 13);
             this.label4.TabIndex = 3;
@@ -83,7 +84,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(30, 172);
+            this.label5.Location = new System.Drawing.Point(30, 208);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 4;
@@ -92,7 +93,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(30, 212);
+            this.label6.Location = new System.Drawing.Point(30, 248);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(76, 13);
             this.label6.TabIndex = 5;
@@ -101,14 +102,14 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(33, 279);
+            this.dataGridView1.Location = new System.Drawing.Point(33, 315);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(419, 150);
             this.dataGridView1.TabIndex = 6;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(367, 245);
+            this.btnSave.Location = new System.Drawing.Point(367, 281);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(85, 28);
             this.btnSave.TabIndex = 7;
@@ -118,7 +119,7 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(143, 41);
+            this.txtID.Location = new System.Drawing.Point(143, 77);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(118, 20);
@@ -126,14 +127,14 @@
             // 
             // txtNama
             // 
-            this.txtNama.Location = new System.Drawing.Point(143, 83);
+            this.txtNama.Location = new System.Drawing.Point(143, 119);
             this.txtNama.Name = "txtNama";
             this.txtNama.Size = new System.Drawing.Size(208, 20);
             this.txtNama.TabIndex = 9;
             // 
             // txtHarga
             // 
-            this.txtHarga.Location = new System.Drawing.Point(143, 124);
+            this.txtHarga.Location = new System.Drawing.Point(143, 160);
             this.txtHarga.Name = "txtHarga";
             this.txtHarga.Size = new System.Drawing.Size(208, 20);
             this.txtHarga.TabIndex = 10;
@@ -141,7 +142,7 @@
             // 
             // txtStock
             // 
-            this.txtStock.Location = new System.Drawing.Point(143, 169);
+            this.txtStock.Location = new System.Drawing.Point(143, 205);
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(208, 20);
             this.txtStock.TabIndex = 11;
@@ -149,7 +150,7 @@
             // 
             // txtSupplier
             // 
-            this.txtSupplier.Location = new System.Drawing.Point(143, 209);
+            this.txtSupplier.Location = new System.Drawing.Point(143, 245);
             this.txtSupplier.Name = "txtSupplier";
             this.txtSupplier.Size = new System.Drawing.Size(208, 20);
             this.txtSupplier.TabIndex = 12;
@@ -158,7 +159,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(489, 441);
+            this.ClientSize = new System.Drawing.Size(481, 489);
             this.Controls.Add(this.txtSupplier);
             this.Controls.Add(this.txtStock);
             this.Controls.Add(this.txtHarga);
