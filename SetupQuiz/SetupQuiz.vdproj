@@ -231,7 +231,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SetupQuiz"
         "ProductCode" = "8:{FE144E66-06C0-47F9-8F8E-CB6E5FC05A10}"
-        "PackageCode" = "8:{753D1CD9-C10A-4B63-A625-41BA476E0610}"
+        "PackageCode" = "8:{166EEC81-29F9-469D-B95A-4C3B6F9909EC}"
         "UpgradeCode" = "8:{A128CC5C-A44C-4028-8C7C-8E8921154983}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -353,7 +353,7 @@
         {
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_5B91CEB062B74D12A8F6C9278369CD7D"
             {
-            "Name" = "8:Shortcut to Primary output from QuizMahasiswa (Active)"
+            "Name" = "8:SetupQuiz"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
