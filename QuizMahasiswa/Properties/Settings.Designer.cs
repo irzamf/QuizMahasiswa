@@ -32,5 +32,15 @@ namespace QuizMahasiswa.Properties {
                 return ((string)(this["quizmahasiswaConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=quizmahasiswa;Integrated Security=True")]
+        public string quizmahasiswaConnectionString1 {
+            get {
+                return ((string)(this["quizmahasiswaConnectionString1"]));
+            }
+        }
     }
 }
