@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.1433
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizMahasiswa", "QuizMahasiswa\QuizMahasiswa.csproj", "{3A36F5B7-D243-4B3A-AFFD-1E9482532CD3}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupQuiz", "SetupQuiz\SetupQuiz.vdproj", "{E0F97610-F1D2-400D-A0CC-E3C0D7CBFBD5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{3A36F5B7-D243-4B3A-AFFD-1E9482532CD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A36F5B7-D243-4B3A-AFFD-1E9482532CD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A36F5B7-D243-4B3A-AFFD-1E9482532CD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0F97610-F1D2-400D-A0CC-E3C0D7CBFBD5}.Debug|Any CPU.ActiveCfg = Debug
+		{E0F97610-F1D2-400D-A0CC-E3C0D7CBFBD5}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

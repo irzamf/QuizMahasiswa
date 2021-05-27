@@ -28,58 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.masterBarangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportBarangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // button1
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.masterBarangToolStripMenuItem,
-            this.reportBarangToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1005, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.button1.Location = new System.Drawing.Point(225, 35);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(116, 65);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Report Data";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // masterBarangToolStripMenuItem
+            // button2
             // 
-            this.masterBarangToolStripMenuItem.Name = "masterBarangToolStripMenuItem";
-            this.masterBarangToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
-            this.masterBarangToolStripMenuItem.Text = "Master Barang";
-            this.masterBarangToolStripMenuItem.Click += new System.EventHandler(this.masterBarangToolStripMenuItem_Click);
-            // 
-            // reportBarangToolStripMenuItem
-            // 
-            this.reportBarangToolStripMenuItem.Name = "reportBarangToolStripMenuItem";
-            this.reportBarangToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
-            this.reportBarangToolStripMenuItem.Text = "Report Barang";
-            this.reportBarangToolStripMenuItem.Click += new System.EventHandler(this.reportBarangToolStripMenuItem_Click);
+            this.button2.Location = new System.Drawing.Point(45, 35);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(117, 58);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Input Data";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1005, 500);
-            this.Controls.Add(this.menuStrip1);
+            this.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.ClientSize = new System.Drawing.Size(399, 139);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.IsMdiContainer = true;
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.Text = "MainForm";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem masterBarangToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reportBarangToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
