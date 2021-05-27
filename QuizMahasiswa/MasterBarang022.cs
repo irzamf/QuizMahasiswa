@@ -23,35 +23,42 @@ namespace QuizMahasiswa
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            try
+            if (txtHarga.Text == "" || txtStock.Text == "" || txtSupplier.Text == "" || txtNama.Text == "")
             {
-                int id = int.Parse(txtID.Text);
-                string nama_brg = txtNama.Text;
-                int hrg = int.Parse(txtHarga.Text);
-                int stck = int.Parse(txtStock.Text);
-                string nama_sup = txtSupplier.Text;
-
-                var data = new tbl_barang
-                {
-                    id_barang = id,
-                    nama_barang = nama_brg,
-                    harga = hrg,
-                    stock = stck,
-                    nama_supplier = nama_sup
-                };
-
-                db.tbl_barangs.InsertOnSubmit(data);
-                db.SubmitChanges();
-                MessageBox.Show("Save Successfully");
-                txtHarga.Clear();
-                txtNama.Clear();
-                txtStock.Clear();
-                txtSupplier.Clear();
-                LoadData();
+                MessageBox.Show
+                   ("Seluruh data wajib diisi dengan benar!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error" + ex);
+                try
+                {
+                    int id = int.Parse(txtID.Text);
+                    string nama_brg = txtNama.Text;
+                    int hrg = int.Parse(txtHarga.Text);
+                    int stck = int.Parse(txtStock.Text);
+                    string nama_sup = txtSupplier.Text;
+                    var data = new tbl_barang
+                    {
+                        id_barang = id,
+                        nama_barang = nama_brg,
+                        harga = hrg,
+                        stock = stck,
+                        nama_supplier = nama_sup
+                    };
+
+                    db.tbl_barangs.InsertOnSubmit(data);
+                    db.SubmitChanges();
+                    MessageBox.Show("Save Successfully");
+                    txtHarga.Clear();
+                    txtNama.Clear();
+                    txtStock.Clear();
+                    txtSupplier.Clear();
+                    LoadData();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error" + ex);
+                }
             }
         }
             
@@ -85,5 +92,20 @@ namespace QuizMahasiswa
             }
         }
 
+        private void txtHarga_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtStock_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
